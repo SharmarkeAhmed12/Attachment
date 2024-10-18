@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Produce Order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Farm Produce Ordering System</h1>
+        <form id="orderForm">
+            <!-- Milk Section -->
+            <div class="produce-item">
+                <img src="images/milk.jpeg" alt="Milk" class="produce-image">
+                <label>
+                    <input type="checkbox" name="produce" value="Milk" data-quantity="10">
+                    Milk (Available: <span class="quantity" id="milk-quantity">10</span>)
+                </label>
+                <input type="number" name="milkUnits" id="milkUnits" value="1" min="1" max="10" class="unit-counter">
+            </div><br>
+
+            <!-- Beef Section -->
+            <div class="produce-item">
+                <img src="images/beef.jpeg" alt="Beef" class="produce-image">
+                <label>
+                    <input type="checkbox" name="produce" value="Beef" data-quantity="8">
+                    Beef (Available: <span class="quantity" id="beef-quantity">8</span>)
+                </label>
+                <input type="number" name="beefUnits" id="beefUnits" value="1" min="1" max="8" class="unit-counter">
+            </div><br>
+
+            <!-- Tomatoes Section -->
+            <div class="produce-item">
+                <img src="images/tomatoes.jpeg" alt="Tomatoes" class="produce-image">
+                <label>
+                    <input type="checkbox" name="produce" value="Tomatoes" data-quantity="15">
+                    Tomatoes (Available: <span class="quantity" id="tomatoes-quantity">15</span>)
+                </label>
+                <input type="number" name="tomatoUnits" id="tomatoUnits" value="1" min="1" max="15" class="unit-counter">
+            </div><br>
+
+            <!-- Onions Section -->
+            <div class="produce-item">
+                <img src="images/onions.jpeg" alt="Onions" class="produce-image">
+                <label>
+                    <input type="checkbox" name="produce" value="Onions" data-quantity="20">
+                    Onions (Available: <span class="quantity" id="onions-quantity">20</span>)
+                </label>
+                <input type="number" name="onionUnits" id="onionUnits" value="1" min="1" max="20" class="unit-counter">
+            </div><br><br>
+
+            <button type="submit">Place Order</button>
+        </form>
+
+        <div id="orderMessage"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
