@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FarmFresh</title>
+	<link rel="stylesheet" href="Homepage.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="icon" href="images/logo.jfif" type="image/x-icon">
+	<link rel="stylesheet" href="https://stackpath.bootsrapcdn.com/@font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<section class="header">
+		<nav>
+			<a href="homepage.html"><img src="images1/logo.jfif"></a>
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times-circle" onclick="hideMenu()"><img src="images1/menu.png"></i>
+				<ul>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="new_products.php">Products</a></li>
+					<li><a href="contact.php">Contact us</a></li>
+					<li><a href="login_prompt.php">Log In/Sign Up</a></li>
+					<li><a href="messages.php">About us</a></li>
+				</ul>	
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"><img src="images/menu.png"></i>
+		</nav>
+
+		<div class="text-box">
+            <hr>
+            <h1> Welcome to FarmFresh</h1>
+            <p> We sell all kinds of organic produce grown locally with care.<br>Hope you enjoy our many items being sold. </p>
+            <hr>
+            <a href="Products.html"><button type="button"><span></span>View Our Products</button></a>   
+    	</div>
+	</section>
+
+<section class="produce">
+	<h1>What we offer</h1>
+	<p>Our products range from: </p>
+	<div class="row">
+		<div class="produce-col-4">	
+		<h3>Fruits</h3>
+		<p>Want something sweet?</p>
+		<img src="images1/tammy-chan-3jnQVF-cV7w-unsplash.jpg">
+		</div>		
+		<div class="produce-col-4">	
+		<h3>Vegetables</h3>
+		<p>All you need for a delicious meal</p>
+		<img src="images1/marisol-benitez-QvkAQTNj4zk-unsplash.jpg">	
+		</div>
+		<div class="produce-col-4">	
+		<h3>Dairy</h3>
+		<p>Fresh from the farm</p>
+		<img src="images1/eiliv-aceron-_8bnn1GqX70-unsplash.jpg">	
+		</div>
+	</div>
+</section>
+
+	<div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <p><br>We provide fresh and high quality farm produce.</p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Farm Fresh Produce <br> &copy;2024</p>
+        </div>
+    </div>
+
+	<script>
+		var navLinks = document.getElementById("navLinks");
+
+		function showMenu(){
+			navLinks.style.right = "0";
+		}
+		function hideMenu(){
+			navLinks.style.right = "-200px";
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fresh Farm Products</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="images/logo.jfif" type="image/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootsrapcdn.com/@font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.jfif" /></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times-circle" onclick="hideMenu()"><img src="images/menu.png"/></i>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="products.php">Products</a></li>
+                    <li><a href="contact.php">Contact us</a></li>
+                    <li><a href="messages.php">Log In/Sign Up</a></li>
+                    <li><a href="login_prompt.php">About us</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"><img src="images/menu.png"/></i>
+            <a href="checkout.html" class="cart" onclick="addToCart(productId, availableQuantity)">
+                <img src="Images/shopping-cart-150504_1280.png" alt="cart icon" />
+                <span id="cart-counter" class="cart-counter" style="color: white">0</span>
+            </a>
+        </nav>
+    </section>
+
+    <section class="products">
+      <h1 class="h1-products">Our Products</h1>
+
+      <div class="row">
+        <div
+          class="product"
+          data-product-id="1"          
+          data-available="40"
+          data-price="50"
+        >
+          <h3>Onions</h3>
+          <p>Price: kshs. 50</p>
+          <p>Available: 40 Kg <span class="available-quantity">40</span></p>
+                <img src="images/vivek-sharma-rDDICrot22U-unsplash.jpg" />
+                <button type="button" onclick="addToCart(1, 40)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-product-id="2" data-available="100" data-price="100">
+                    <h3>Tomatoes</h3>
+                    <p>Price: kshs. 100</p>
+                    <p>Available: 100 <span class="available-quantity">100</span></p>
+                    <img src="images/engin-akyurt-eb26eV-ys_k-unsplash.jpg" />
+                    <button type="button" onclick="addToCart(2, 100)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-product-id="3" data-available="10" data-price="50">
+                    <h3>Green Broccoli</h3>
+                    <p>Price: kshs. 50</p>
+                    <p>Available: 10<span class="available-quantity">10</span></p>
+                    <img src="images/annie-spratt-m1t-RJ1iCIU-unsplash.jpg" />
+                    <button type="button" onclick="addToCart(3, 10)">Add to Cart</button>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="product" data-product-id="4" data-available="20" data-price="20">
+                        <h3>Pepper</h3>
+                        <p>Price: kshs. 20</p>
+                        <p>Available: 20<span class="available-quantity">20</span></p>
+                        <img src="images/mockup-graphics-nZUQgW0FVnc-unsplash.jpg" />
+                        <button type="button" onclick="addToCart(4, 20)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-product-id="5" data-available="10" data-price="30">
+                        <h3>Garlic</h3>
+                        <p>Price: kshs. 30</p>
+                        <p>Available: 10<span class="available-quantity">10</span></p>
+                        <img src="images/joe-green-4LJYzvrxISI-unsplash.jpg" />
+                        <button type="button" onclick="addToCart(5, 10)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-product-id="6" data-available="20" data-price="40">
+                        <h3>Cabbage</h3>
+                        <p>Price: kshs. 40</p>
+                        <p>Available: 20<span class="available-quantity">20</span></p>
+                        <img src="images/natasha-skov-ujh4hU9S-KA-unsplash.jpg" />
+                        <button type="button" onclick="addToCart(6, 20)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="product" data-product-id="7" data-available="60" data-price="20">
+                        <h3>Kales</h3>
+                        <p>Price: kshs. 20</p>
+                        <p>Available: 60<span class="available-quantity">60</span></p>
+                        <img src="images/ashleigh-shea-kFZ2nivVBYI-unsplash.jpg" />
+                        <button type="button" onclick="addToCart(7, 60)">Add to Cart</button>
+                    </div>
+                    <div class="product" data-product-id="8" data-available="30" data-price="50">
+                        <h3>Mangos</h3>
+                        <p>Price: kshs. 50</p>
+                        <p>Available: 30<span class="available-quantity">30</span></p>
+                        <img src="images/jacqueline-brandwayn-McxsrN3WW48-unsplash.jpg" />
+                        <button type="button" onclick="addToCart(8, 30)">Add to Cart</button>
+                    </div>
+                </div>
+    </section>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <p>We provide fresh and high quality farm products.</p>
+                </div>
+            </div>
+            <hr />
+            <p class="copyright">
+                Farm Fresh Produce <br /> &copy; 2023
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const products = document.querySelectorAll(".product");
+        const cart = [];
+
+        products.forEach((product) => {
+            // Getting the data-available attribute and update the text content of the .available-quantity element
+            const availableQuantity = product.getAttribute("data-available");
+            const availableQuantityElement = product.querySelector(
+                ".available-quantity"
+            );
+            availableQuantityElement.textContent = availableQuantity;
+
+            // Updating the text content of the .available-quantity element with the value of the data-available attribute for each product
+            product.addEventListener("mouseover", () => {
+                availableQuantityElement.style.display = "block";
+            });
+            product.addEventListener("mouseout", () => {
+                availableQuantityElement.style.display = "none";
+            });
+
+            // Adding logic to check if the data-available attribute is less than or equal to 0, and display an error message if necessary
+            const button = product.querySelector("button");
+            button.addEventListener("click", (event) => {
+                if (availableQuantity <= 0) {
+                    alert("This product is out of stock");
+                    return;
+                }
+
+                // Updating data-available and .available-quantity for each item in the cart
+                product.setAttribute("data-available", availableQuantity - 1);
+                availableQuantityElement.textContent = availableQuantity - 1;
+
+                // Adding the product to the cart and update the cart counter
+                cart.push(product);
+                updateCartCounter(cart);
+            });
+        });
+
+        function updateCartCounter(cart) {
+            const cartCounter = document.querySelector(".cart-counter");
+            cartCounter.textContent = cart.length;
+
+            if (cart.length > 0) {
+                cartCounter.style.display = "block";
+            } else {
+                cartCounter.style.display = "none";
+            }
+        }
+
+        const cartButton = document.querySelector(".cart");
+        cartButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            window.location = "checkout.html";
+        });
+    </script>
+</body>
+
+</html>
